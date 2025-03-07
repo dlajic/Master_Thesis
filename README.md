@@ -13,7 +13,7 @@ Analysis_final: 0_1_webtracking_mig - 0-4-survey_analyis_mig
 Hierfür habe ich einen eigenen Trainingsdatensatz gescraped, welcher pro Classifier aus über 100.000 Nachrichtenartikeln der größten News Outlets Deutschlands besteht.
 Nach Bereinigung dieser Daten wurden diese zum fine tunen von BERT Modellen genutzt, welche später zur Anwendung kamen. Zusätzlich wurden noch weitere Überblicke durch BERT Topic und Word Clouds erstellt.
 
-**Ordnerstruktur:**
+## Ordnerstruktur:
 
 **Analysis_final:** Finale Analyse der Daten. (aufgrund Datenschutz diese Daten nicht öffentlich zugänglich)
 
