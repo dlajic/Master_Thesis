@@ -1,6 +1,6 @@
 # Master_Thesis
 
-# Allgemein: 
+## Allgemein: 
 
 **Thema:** Einfluss von (Online-) Nachrichtenkonsum (Fake vs. conventional news) auf Einstellung gegenüber Migranten und bestimmten Parteien. 
 
