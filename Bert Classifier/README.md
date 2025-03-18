@@ -2,6 +2,10 @@
 
 This directory contains scripts and resources for training two distinct BERT-based classifiers developed as part of the thesis:
 
+### Web_scraping
+- **Description:** Scripts to scrape news articles for training the BERT classifier. This forms the base for the training dataset.
+- **Contents:** Includes scripts for automated scraping, cleaning, and initial processing of data.
+
 ## Classifiers
 
 ### 1. Migration Topic Classifier (`mig`)
@@ -31,4 +35,3 @@ This directory contains scripts and resources for training two distinct BERT-bas
 3. **Model Finalization:**
    - The best-performing models from the validation phase are selected.
    - Final models are trained on the complete dataset and saved in the `models` directory for future use.
-
