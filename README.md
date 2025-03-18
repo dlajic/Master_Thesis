@@ -22,7 +22,7 @@ This project investigates the influence of online news consumption, distinguishi
 - **Description:** Contains the final analytical scripts that utilize outputs from the BERT classifier to correlate news consumption patterns with shifts in public opinion.
 
 ### Web_scraping
-- **Description:** Scripts to scrape news articles for training the BERT classifier. This forms the base for our training dataset.
+- **Description:** Scripts to scrape news articles for training the BERT classifier. This forms the base for the training dataset.
 - **Contents:** Includes scripts for automated scraping, cleaning, and initial processing of data.
 
 ### BERT Topic Models and Word Clouds
