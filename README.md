@@ -22,4 +22,4 @@ This project investigates the influence of online news consumption, distinguishi
 - **Description:** Contains the final analytical scripts that utilize outputs from the BERT classifier to correlate news consumption patterns with shifts in public opinion.
 
 ### BERT Topic Models and Word Clouds
-- **Description:** Utilizes BERT models to generate thematic subgroups and visual word clouds that illustrate the prevalence of certain themes in fake versus conventional news.
+- **Description:** Utilizes BERT models to generate thematic subgroups. Using NER to visualize word clouds that illustrate the prevalence of certain themes in fake versus conventional news.
