@@ -1,3 +1,8 @@
+> **Note:**  
+> This repository contains code and documentation from my Master's thesis, submitted in December 2023. It is shared here to illustrate my early work with large language models (LLMs) and digital trace data.  
+> The project was **never intended to be a reusable or production-ready codebase**, as it was developed as part of a university research setting and aligned with the working style of the supervising lab. Much of the analysis was done in Jupyter Notebooks, and parts rely on non-public data.  
+> For more recent and structured work, feel free to explore the other projects on my GitHub profile.
+
 # Master Thesis: Exploring the Influence of Migration News Consumption on Respective Attitudes and Political Perspectives through Deep Learning and Digital Trace Data Analysis 
 
 ## Overview
