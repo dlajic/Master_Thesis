@@ -15,6 +15,15 @@ This project investigates the influence of online news consumption, distinguishi
 - **Description:** Central to this study was the development of a BERT-based classifier. This classifier was trained to distinguish between articles related to migration and others, and to identify whether an article is opinionated.
 - **Training Data:** The classifier was trained using a dataset created from scraped news articles, tagged with themes as they appeared on various news platforms. This dataset is included in the repository for further exploration and use.
 
+### Model Performance (Cross-Validation)
+
+Both BERT-based classifiers demonstrated strong performance in five-fold cross-validation:
+
+- **Migration Classifier:** Accuracy 97%, F1 0.98, AUROC 0.995  
+- **Opinion Classifier:** Accuracy 94%, F1 0.98, AUROC 0.98
+
+Full evaluation metrics are available in the thesis PDF.
+
 ### Data Sources and Usage
 **Web Tracking Data and Survey Data:**
 - Due to privacy restrictions, the detailed tracking and survey data analyzed in this study are not published. However, the methodology and analysis scripts are shared.
