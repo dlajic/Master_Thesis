@@ -3,37 +3,55 @@
 > The **code was not designed as a reusable or production-ready software project**, but rather reflects an academic workflow, as it was developed as part of a university research setting and aligned with the working style of the supervising lab. Much of the analysis was done in Jupyter Notebooks, and parts rely on non-public data.  
 > For more recent and structured work, feel free to explore the other projects on my GitHub profile.
 
-# Master Thesis: Exploring the Influence of Migration News Consumption on Respective Attitudes and Political Perspectives through Deep Learning and Digital Trace Data Analysis 
+# Master's Thesis: Deep Learning on News Consumption and Political Attitudes
+
+This repository documents the codebase and methodology of my Master’s thesis (submitted December 2023), which investigates how the consumption of online news on migration—particularly from fake vs. traditional media—affects political preferences and attitudes toward migrants.
 
 ## Overview
 
-This project investigates the influence of online news consumption, distinguishing between fake and conventional news, on attitudes towards migrants and certain political parties. A significant component of the study involved developing a BERT-based classifier to categorize news articles by themes related to migration and to identify opinion articles. This classifier was fine-tuned using a large dataset of over 100,000 news articles, which I scraped from major German news outlets.
+The project integrates web tracking data (6 months), survey data (3 waves), and advanced NLP-based content analysis using BERT-based models.
 
-## Key Components
+The key goal: measure whether exposure to certain types of migration-related news influences AfD preference and anti-migrant sentiment over time.
 
-### BERT Classifier
-- **Description:** Central to this study was the development of a BERT-based classifier. This classifier was trained to distinguish between articles related to migration and others, and to identify whether an article is opinionated.
-- **Training Data:** The classifier was trained using a dataset created from scraped news articles, tagged with themes as they appeared on various news platforms. This dataset is included in the repository for further exploration and use.
+## Key NLP Components
 
-### Model Performance (Cross-Validation)
+### Two BERT-based classifiers
+- **Migration Topic Classifier**: F1 0.97  
+- **Opinion vs. Descriptive Classifier**: F1 0.94  
+→ Built via transfer learning on a custom-labeled dataset of over 200,000 scraped German news articles.
 
-Both BERT-based classifiers demonstrated strong performance in five-fold cross-validation:
+### Data Pipeline
+- Scraped from Germany’s largest news portals.
+- Automatically labeled using editorial metadata (e.g., "Migration", "Opinion").
+- Evaluated using 5-fold cross-validation.
 
-- **Migration Classifier:** Accuracy 97%, F1 0.98, AUROC 0.995  
-- **Opinion Classifier:** Accuracy 94%, F1 0.98, AUROC 0.98
+## Behavioral & Survey Data
 
-Full evaluation metrics are available in the thesis PDF.
+- Web tracking data: Full browsing history over six months.
+- Survey data: Three-wave panel with attitudinal and political variables.
+- Combined to construct time-varying exposure indicators.
 
-### Data Sources and Usage
-**Web Tracking Data and Survey Data:**
-- Due to privacy restrictions, the detailed tracking and survey data analyzed in this study are not published. However, the methodology and analysis scripts are shared.
-- **Web Tracking Data:** Includes complete internet usage data over six months.
-- **Survey Data:** Comprises responses from three surveys.
+Due to privacy restrictions, the detailed tracking and survey data analyzed in this study are not published. However, the methodology and analysis scripts are shared.
 
-## Repository Structure
+## Analytical Model
 
-### Analysis_final
-- **Description:** Contains the final analytical scripts that utilize outputs from the BERT classifier to correlate news consumption patterns with shifts in public opinion.
+A Within-Between random effects panel model was used to link media exposure patterns to changes in:
+- Attitudes toward migrants  
+- Party preferences (e.g., AfD)  
 
-### BERT Topic Models and Word Clouds
-- **Description:** Utilizes BERT models to generate thematic subgroups. Using NER to visualize word clouds that illustrate the prevalence of certain themes in fake versus conventional news.
+Control variables and pre-treatment baselines included.
+
+## Additional Analyses
+
+- BERT-based topic modeling to identify subtopics within migration-related articles.
+- Named Entity Recognition and word cloud analysis to compare fake vs. conventional media coverage.
+
+## Repository Structure (Partial)
+
+- `bert_models/`: Training and evaluation scripts for both classifiers  
+- `data_prep/`: Scraping, cleaning, preprocessing  
+- `analysis_final/`: Final notebook integrating ML outputs with panel data  
+- `results/`: Cross-validation logs, plots, model outputs  
+- `thesis.pdf`: Full thesis document (non-public data redacted)
+
+For a more recent and structured ML project, see the [Energy Forecasting Project](https://github.com/dlajic/energy-forecasting-transformer-lightgbm).
